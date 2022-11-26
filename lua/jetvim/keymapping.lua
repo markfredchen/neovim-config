@@ -6,9 +6,9 @@ key_mappings = {
     -----------------------
     -- Widnow Navigation --
     -----------------------
-
     ["<Leader>j"] = "<C-w>j",
     ["<Leader>k"] = "<C-w>k",
+    ["<Leader>h"] = "<C-w>h",
     ["<Leader>l"] = "<C-w>l",
     ---------------
     -- Move Line --

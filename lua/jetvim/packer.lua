@@ -52,12 +52,13 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim" }
   use { "nvim-tree/nvim-web-devicons" }
   use { "nvim-lualine/lualine.nvim" }
-
+  use { "goolord/alpha-nvim" }
   -------------
   -- Editing --
   -------------
   use { "tpope/vim-surround" }
   use { "windwp/nvim-autopairs" }
+  use { "mg979/vim-visual-multi", branch = "master" }
   use { "numToStr/Comment.nvim" }
 
   -----------------
@@ -86,6 +87,11 @@ return packer.startup(function(use)
   -- EasyMotion --
   ----------------
   use { "easymotion/vim-easymotion" }
+
+  -------------
+  -- LazyGit --
+  -------------
+  use { "kdheepak/lazygit.nvim" }
 
   if packer_bootstrap then
     require("packer").sync()

@@ -5,9 +5,15 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+local status, nvim_tree = pcall(require, "nvim-tree")
+if not status then
+  return
+end
 
-nvim_tree_utils = require("nvim-tree.utils")
-
+local utils_status, nvim_tree_utils = pcall(require, "nvim-tree.utils")
+if not utils_status then
+  return
+end
 -- Auto close nvim when nvim-tree is the last window.
 vim.api.nvim_create_autocmd("BufEnter", {
   nested = true,
@@ -19,7 +25,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 
-require("nvim-tree").setup({
+nvim_tree.setup({
   auto_reload_on_write = true,
   create_in_closed_folder = true,
   disable_netrw = false,
