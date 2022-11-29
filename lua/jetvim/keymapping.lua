@@ -7,6 +7,20 @@ key_mappings = {
     ["<C-j>"] = "<C-w>j",
     ["<C-k>"] = "<C-w>k",
     ["<C-l>"] = "<C-w>l",
+    
+    ------------------------
+    -- Resize with arrows --
+    ------------------------
+    ["<C-Up>"] = ":resize +3<CR>",
+    ["<C-Down>"] = ":resize -3<CR>",
+    ["<C-Left>"] = ":vertical resize -3<CR>",
+    ["<C-Right>"] = ":vertical resize +3<CR>",
+
+    ----------------
+    -- bufferline --
+    ----------------
+    ["<S-l>"] = ":BufferLineCycleNext<CR>",
+    ["<S-h>"] = ":BufferLineCyclePrevious<CR>",
   }
 }
 
