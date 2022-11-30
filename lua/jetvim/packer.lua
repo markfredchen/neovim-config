@@ -51,9 +51,31 @@ return packer.startup(function(use)
   -------------
   use { "tpope/vim-surround" }
   use { "windwp/nvim-autopairs" }
+  use { "tpope/vim-repeat" }
 
 
   use { "nvim-tree/nvim-tree.lua" }
+  ----------------
+  -- Neovim CMP --
+  ----------------
+  use { "neovim/nvim-lspconfig" }
+  use { "hrsh7th/cmp-nvim-lsp" }
+  use { "hrsh7th/cmp-buffer" }
+  use { "hrsh7th/cmp-path" }
+  use { "hrsh7th/cmp-cmdline" }
+  use { "hrsh7th/nvim-cmp" }
+  use { "hrsh7th/cmp-vsnip" }
+  use { "hrsh7th/vim-vsnip" }
+  use { "L3MON4D3/LuaSnip" }
+  use { "saadparwaiz1/cmp_luasnip" }
+
+
+  ----------------
+  -- Neovim LSP --
+  ----------------
+  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" }
+  use { "neovim/nvim-lspconfig" }
 
   if packer_bootstrap then
     require("packer").sync()
