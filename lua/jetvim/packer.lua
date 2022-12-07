@@ -45,6 +45,12 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim" }
   use { "nvim-tree/nvim-web-devicons" }
   use { "nvim-lualine/lualine.nvim" }
+  use { "SmiteshP/nvim-navic" }
+
+  ---------------
+  -- Dashboard --
+  ---------------
+  use { "goolord/alpha-nvim" }
 
   -------------
   -- Editing --
@@ -52,13 +58,23 @@ return packer.startup(function(use)
   use { "tpope/vim-surround" }
   use { "windwp/nvim-autopairs" }
   use { "tpope/vim-repeat" }
+  
+  ----------------
+  -- Navigation --
+  ----------------
+  use { "phaazon/hop.nvim" }
 
-
+  -------------------
+  -- File Explorer --
+  -------------------
   use { "nvim-tree/nvim-tree.lua" }
+  use { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
+  use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
+  use { "ahmedkhalf/project.nvim" }   
+
   ----------------
   -- Neovim CMP --
   ----------------
-  use { "neovim/nvim-lspconfig" }
   use { "hrsh7th/cmp-nvim-lsp" }
   use { "hrsh7th/cmp-buffer" }
   use { "hrsh7th/cmp-path" }
@@ -76,6 +92,19 @@ return packer.startup(function(use)
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
   use { "neovim/nvim-lspconfig" }
+
+  ----------------
+  -- Treesitter --
+  ----------------
+  use { "nvim-treesitter/nvim-treesitter" }
+
+  ---------
+  -- Git --
+  ---------
+  use { "voldikss/vim-floaterm" }
+
+
+
 
   if packer_bootstrap then
     require("packer").sync()

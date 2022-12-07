@@ -20,7 +20,11 @@ key_mappings = {
     -- bufferline --
     ----------------
     ["<S-l>"] = ":BufferLineCycleNext<CR>",
-    ["<S-h>"] = ":BufferLineCyclePrevious<CR>",
+    ["<S-h>"] = ":BufferLineCyclePrev<CR>",
+
+    ["<Leader>h"] = ":HopChar2MW<CR>",
+    ["<Leader>l"] = ":HopLineMW<CR>",
+    ["<Leader>nn"] = ":FloatermNew lazygit<CR>",
   }
 }
 

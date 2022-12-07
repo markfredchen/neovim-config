@@ -12,5 +12,12 @@ jetvim.ui.icons = {
     GitStaged = "✓",
     GitUnstaged = "",
     GitUntracked = "★",
+  },
+  alpha = {
+    NewFile = "",
+    FindFile = "",
+    Project = "",
+    FindText = "",
+    Gear = "",
   }
 }
