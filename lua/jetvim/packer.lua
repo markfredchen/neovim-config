@@ -70,7 +70,7 @@ return packer.startup(function(use)
   use { "nvim-tree/nvim-tree.lua" }
   use { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-  use { "ahmedkhalf/project.nvim" }   
+  use { "nvim-telescope/telescope-project.nvim" }   
 
   ----------------
   -- Neovim CMP --
@@ -104,7 +104,7 @@ return packer.startup(function(use)
   use { "voldikss/vim-floaterm" }
 
 
-
+  use { "Pocco81/auto-save.nvim" }
 
   if packer_bootstrap then
     require("packer").sync()

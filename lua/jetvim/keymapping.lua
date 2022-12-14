@@ -22,9 +22,33 @@ key_mappings = {
     ["<S-l>"] = ":BufferLineCycleNext<CR>",
     ["<S-h>"] = ":BufferLineCyclePrev<CR>",
 
+    ---------
+    -- hop --
+    ---------
     ["<Leader>h"] = ":HopChar2MW<CR>",
     ["<Leader>l"] = ":HopLineMW<CR>",
+
+    ---------
+    -- Git --
+    ---------
     ["<Leader>nn"] = ":FloatermNew lazygit<CR>",
+
+    ---------------
+    -- Move Line --
+    ---------------
+    ["<A-j>"] = ":move .+1<CR>",
+    ["<A-k>"] = ":move .-2<CR>",
+  },
+  insert_mode = {
+    ["<C-h>"] = "<Left>",
+    ["<C-j>"] = "<Down>",
+    ["<C-k>"] = "<Up>",
+    ["<C-l>"] = "<Right>",
+    ---------------
+    -- Move Line --
+    ---------------
+    ["<A-j>"] = ":move .+1<CR>",
+    ["<A-k>"] = ":move .-2<CR>",
   }
 }
 

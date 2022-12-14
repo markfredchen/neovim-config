@@ -20,7 +20,7 @@ dashboard.section.header.val = {
 }
 dashboard.section.buttons.val = {
    button("f", jetvim.ui.icons.alpha.FindFile .. "  Find File", ":Telescope find_files<CR>"),
-   button("p", jetvim.ui.icons.alpha.Project .. "  Projects ", "<CMD>Telescope projects<CR>"),
+   button("p", jetvim.ui.icons.alpha.Project .. "  Projects ", "<CMD>Telescope project<CR>"),
    button("t", jetvim.ui.icons.alpha.FindText .. "  Find Text", "<CMD>Telescope live_grep<CR>"),
    button("c", jetvim.ui.icons.alpha.Gear .. "  Configuration", "<CMD>edit ~/.config/nvim/<CR>"),
 }
