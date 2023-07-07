@@ -1,0 +1,6 @@
+nio.setup("auto-save", {enabled=true,})
+nio.setup("hop")
+nio.setup("nvim-navic")
+nio.setup("lualine")
+nio.setup("Comment")
+nio.setup("nvim-autopairs")

@@ -1,3 +1,4 @@
+
 -- auto install packer if not installeds
 local ensure_packer = function()
     local fn = vim.fn
@@ -15,7 +16,7 @@ local packer_bootstrap = ensure_packer()
 vim.cmd([[ 
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost packer.lua source <afile> | PackerSync
+    autocmd BufWritePost package.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -24,7 +25,6 @@ local status, packer = pcall(require, "packer")
 if not status then
     return
 end
-
 
 return packer.startup(function(use)
   ---------------------
@@ -45,7 +45,6 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim" }
   use { "nvim-tree/nvim-web-devicons" }
   use { "nvim-lualine/lualine.nvim" }
-  use { "SmiteshP/nvim-navic" }
 
   ---------------
   -- Dashboard --
@@ -60,6 +59,7 @@ return packer.startup(function(use)
   use { "tpope/vim-repeat" }
   use { "numToStr/Comment.nvim" }
   use { "nathanaelkane/vim-indent-guides" }
+  use { "Pocco81/auto-save.nvim" }
   ----------------
   -- Navigation --
   ----------------
@@ -72,7 +72,7 @@ return packer.startup(function(use)
   use { "nvim-tree/nvim-tree.lua" }
   use { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-  use { "nvim-telescope/telescope-project.nvim" }   
+  use { "nvim-telescope/telescope-project.nvim" }
 
   ----------------
   -- Neovim CMP --
@@ -87,13 +87,13 @@ return packer.startup(function(use)
   use { "L3MON4D3/LuaSnip" }
   use { "saadparwaiz1/cmp_luasnip" }
 
-
   ----------------
   -- Neovim LSP --
   ----------------
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
   use { "neovim/nvim-lspconfig" }
+  use { "jose-elias-alvarez/null-ls.nvim" }
 
   ----------------
   -- Treesitter --
@@ -105,8 +105,9 @@ return packer.startup(function(use)
   ---------
   use { "voldikss/vim-floaterm" }
 
-
-  use { "Pocco81/auto-save.nvim" }
+  ------------
+  -- Others --
+  ------------
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   if packer_bootstrap then

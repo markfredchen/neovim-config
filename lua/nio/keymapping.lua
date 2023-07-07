@@ -1,13 +1,13 @@
 vim.g.mapleader = " "
 
-key_mappings = {
+local key_mappings = {
   normal_mode = {
     -- Window Navigation --
     ["<C-h>"] = "<C-w>h",
     ["<C-j>"] = "<C-w>j",
     ["<C-k>"] = "<C-w>k",
     ["<C-l>"] = "<C-w>l",
-    
+
     ------------------------
     -- Resize with arrows --
     ------------------------
@@ -27,26 +27,21 @@ key_mappings = {
     ---------
     ["<Leader>h"] = ":HopChar2MW<CR>",
     ["<Leader>l"] = ":HopLineMW<CR>",
-
     ---------
     -- Git --
     ---------
     ["<Leader>nn"] = ":FloatermNew lazygit<CR>",
 
-    ---------------
-    -- Move Line --
-    ---------------
-    ["<A-j>"] = ":move .+1<CR>",
-    ["<A-k>"] = ":move .-2<CR>",
-    
     ["<Leader>c"] = ":BDelete this<CR>",
-    ["<Leader>wo"] = ":BDelete other<CR>",
+    ["<Leader>ao"] = ":BDelete other<CR>",
   },
   insert_mode = {
     ["<C-h>"] = "<Left>",
     ["<C-j>"] = "<Down>",
     ["<C-k>"] = "<Up>",
     ["<C-l>"] = "<Right>",
+    ["<C-o>"] = "<Esc><S-a>",
+    ["<C-CR>"] = "<Esc>o",
     ---------------
     -- Move Line --
     ---------------
@@ -60,8 +55,9 @@ local mode_map = {
   insert_mode = "i",
   visual_mode = "x"
 }
+
 for mode_key, mode_key_mappings in pairs(key_mappings) do
   for key, mapping in pairs(mode_key_mappings) do
-    jetvim.keymap(mode_map[mode_key], key, mapping)
+    nio.keymap(mode_map[mode_key], key, mapping)
   end
 end

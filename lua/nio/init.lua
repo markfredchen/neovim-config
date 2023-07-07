@@ -1,0 +1,6 @@
+require("nio.package")
+require("nio.core")
+require("nio.options")
+require("nio.keymapping")
+require("nio.theme")
+nio.requireDir("plugins")

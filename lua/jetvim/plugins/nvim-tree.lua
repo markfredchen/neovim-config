@@ -105,3 +105,4 @@ nvim_tree.setup({
 
 jetvim.keymap("n", "<leader>o", ":NvimTreeFocus<CR>")
 jetvim.keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
+

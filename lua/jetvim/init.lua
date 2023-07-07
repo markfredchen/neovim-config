@@ -4,3 +4,4 @@ require("jetvim.keymapping")
 require("jetvim.packer")
 require("jetvim.theme")
 jetvim.requireDir("plugins")
+ 
