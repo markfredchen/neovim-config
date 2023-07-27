@@ -13,3 +13,4 @@ edge.requireDir = function(dir)
   end
 end
 
+require("edgenvim.core.lsp_utils")

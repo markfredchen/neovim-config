@@ -83,14 +83,26 @@ return {
         update_focused_file = {
           enable = true,
           update_cwd = true,
+          update_root = false,
           ignore_list = {},
+        },
+        view = {
+          adaptive_size = false,
+          side = "left",
+          width = 30,
+          preserve_window_proportions = true,
         },
         git = {
           enable = true,
           ignore = false,
           timeout = 200,
         },
+        filesystem_watchers = {
+          enable = true,
+        },
         renderer = {
+          highlight_git = false,
+
           indent_markers = {
             enable = true,
             icons = {
@@ -127,6 +139,17 @@ return {
         on_attach = on_attach,
       }
       return opt
+    end,
+    config = function(_, opts)
+            vim.api.nvim_create_autocmd("BufEnter", {
+        nested = true,
+        callback = function()
+          if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
+            vim.cmd "quit"
+          end
+        end
+      })
+      require("nvim-tree").setup(opts)
     end,
   },
 }

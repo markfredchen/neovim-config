@@ -10,7 +10,11 @@ return {
       "MasonUpdate", -- AstroNvim extension here as well
       "MasonUpdateAll", -- AstroNvim specific
     },
-    opts = {},
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+      },
+    },
     build = ":MasonUpdate",
   },
 }
